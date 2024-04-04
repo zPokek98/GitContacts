@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView{
+                NavigationLink(destination: ContactDetailView()) {
+                    Text("aaa")
+                }
+                NavigationLink(destination: ContactDetailView()) {
+                    Text("aaa")
+                }
+            }
+            .navigationTitle("Contacts")
+            .toolbar(content: {
+                Button(action: {
+                    
+                }, label: {
+                    Text("+")
+                        .font(.title)
+                })
+            })
         }
-        .padding()
+        
     }
 }
 

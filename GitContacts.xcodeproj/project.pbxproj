@@ -11,6 +11,10 @@
 		541FF5ED2BBD4ADB00A4BD82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FF5EC2BBD4ADB00A4BD82 /* ContentView.swift */; };
 		541FF5EF2BBD4ADC00A4BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541FF5EE2BBD4ADC00A4BD82 /* Assets.xcassets */; };
 		541FF5F22BBD4ADC00A4BD82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541FF5F12BBD4ADC00A4BD82 /* Preview Assets.xcassets */; };
+		541FF5F92BBD4C8400A4BD82 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FF5F82BBD4C8400A4BD82 /* ContactDetailView.swift */; };
+		541FF5FB2BBD4FDA00A4BD82 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FF5FA2BBD4FDA00A4BD82 /* ContactModel.swift */; };
+		541FF5FD2BBD506A00A4BD82 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FF5FC2BBD506A00A4BD82 /* ContactViewModel.swift */; };
+		541FF6002BBD5C9E00A4BD82 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 541FF5FF2BBD5C9E00A4BD82 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		541FF5EC2BBD4ADB00A4BD82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		541FF5EE2BBD4ADC00A4BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		541FF5F12BBD4ADC00A4BD82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		541FF5F82BBD4C8400A4BD82 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		541FF5FA2BBD4FDA00A4BD82 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		541FF5FC2BBD506A00A4BD82 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541FF6002BBD5C9E00A4BD82 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				541FF5EA2BBD4ADB00A4BD82 /* GitContactsApp.swift */,
+				541FF5FA2BBD4FDA00A4BD82 /* ContactModel.swift */,
 				541FF5EC2BBD4ADB00A4BD82 /* ContentView.swift */,
+				541FF5FC2BBD506A00A4BD82 /* ContactViewModel.swift */,
+				541FF5F82BBD4C8400A4BD82 /* ContactDetailView.swift */,
 				541FF5EE2BBD4ADC00A4BD82 /* Assets.xcassets */,
 				541FF5F02BBD4ADC00A4BD82 /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = GitContacts;
+			packageProductDependencies = (
+				541FF5FF2BBD5C9E00A4BD82 /* SwiftyJSON */,
+			);
 			productName = GitContacts;
 			productReference = 541FF5E72BBD4ADB00A4BD82 /* GitContacts.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 541FF5DE2BBD4ADB00A4BD82;
+			packageReferences = (
+				541FF5FE2BBD5C9E00A4BD82 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 541FF5E82BBD4ADB00A4BD82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541FF5F92BBD4C8400A4BD82 /* ContactDetailView.swift in Sources */,
 				541FF5ED2BBD4ADB00A4BD82 /* ContentView.swift in Sources */,
+				541FF5FD2BBD506A00A4BD82 /* ContactViewModel.swift in Sources */,
+				541FF5FB2BBD4FDA00A4BD82 /* ContactModel.swift in Sources */,
 				541FF5EB2BBD4ADB00A4BD82 /* GitContactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		541FF5FE2BBD5C9E00A4BD82 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		541FF5FF2BBD5C9E00A4BD82 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 541FF5FE2BBD5C9E00A4BD82 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 541FF5DF2BBD4ADB00A4BD82 /* Project object */;
 }
