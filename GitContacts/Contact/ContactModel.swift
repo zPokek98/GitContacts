@@ -9,15 +9,15 @@ import Foundation
 
 struct Contact: Identifiable, Codable{
     
-    var id: UUID = UUID()
+    var id: String
     var username: String
     var name: String
-    var avatarURL: URL
-    var githubLink: URL
-    var repoLink: URL
-    var company: URL
-    var blog: URL
-    var location: URL
+    var avatarURL: String
+    var githubLink: String
+    var repoLink: String
+    var company: String
+    var blog: String
+    var location: String
     var followers: Int
     var following: Int
     var email: String
